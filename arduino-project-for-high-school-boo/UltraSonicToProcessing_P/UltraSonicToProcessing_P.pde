@@ -2,7 +2,7 @@
 import processing.serial.*;
 
 Serial myPort;        // Create object from Serial class
-short portIndex = 0;  // select the com port, 0 is the first port
+short portIndex = 3;  // select the com port, 0 is the first port
 char HEADER = 'H';
 int value1;         // Data received from the serial port
 float humidity=0, temperature=0 ,distance=0, currentDiameter=0,easing=0.05;
@@ -45,7 +45,7 @@ void draw()
     }
   }
   background(#03DBFF);             // Set background to white
-  float diameter=map(distance,0,300,max(width,height),0);
+  float diameter=map(distance,0,500,max(width,height),0);
   currentDiameter+=(diameter-currentDiameter)*easing;
   shape(myCar, width/2, height/2,currentDiameter,currentDiameter);
   //textAlign(CENTER CENTER);
