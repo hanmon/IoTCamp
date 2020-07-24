@@ -17,10 +17,10 @@
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 //for arduino MEGA 2560
-//int rowPins[] = {45, 43, 41, 39};
-//int columnPins[] = {37, 35, 33, 31};
-int rowPins[] = {49,47,45, 43};
-int columnPins[] = {41,39,37, 35};
+int rowPins[] = {45, 43, 41, 39};
+int columnPins[] = {37, 35, 33, 31};
+//int rowPins[] = {49,47,45, 43};
+//int columnPins[] = {41,39,37, 35};
 char digitaMap[4][4] {
   {'1', '2', '3', 'A'},
   {'4', '5', '6', 'B'},

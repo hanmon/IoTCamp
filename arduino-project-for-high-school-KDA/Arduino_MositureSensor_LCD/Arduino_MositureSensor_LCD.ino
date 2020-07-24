@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  int sensorValue = 1023-analogRead(A2);
+  int sensorValue = analogRead(A0);
   int Humi =  map(sensorValue, 0, 385, 0, 1000);
 
   Rsensor= (Humi/10.0);

@@ -1,6 +1,6 @@
 //本範例按鈕接法為負向邏輯
 int btnPin = 2;
-int ledPin = 8;
+int ledPin = 13;
 const int debounceTime = 20;
 volatile unsigned long lastTriggeredTime = 0;
 volatile bool lastBtnState = HIGH;

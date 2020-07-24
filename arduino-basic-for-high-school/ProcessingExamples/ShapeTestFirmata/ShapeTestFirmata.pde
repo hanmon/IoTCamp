@@ -1,7 +1,7 @@
 import processing.serial.*;
 import cc.arduino.*;
-Arduino arduino = new Arduino(this, Arduino.list()[0], 57600);
-int ledPin=13;
+Arduino arduino = new Arduino(this, Arduino.list()[3], 57600);
+int ledPin=10;
 PShape bOff,bOn;
 boolean bulbState=false;
 void setup() {
@@ -12,6 +12,7 @@ void setup() {
   background(255);
   //for initializing arduino
   arduino.pinMode(ledPin,Arduino.OUTPUT);
+  
 }
 
 void draw() {

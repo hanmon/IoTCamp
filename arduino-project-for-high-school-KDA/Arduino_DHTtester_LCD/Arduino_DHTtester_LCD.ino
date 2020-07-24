@@ -7,7 +7,7 @@
 
 // LCM1602 I2C LCD
 LiquidCrystal_I2C lcd(0x27,16,2);
-#define DHTPIN 3     // what pin we're connected to
+#define DHTPIN 23     // what pin we're connected to
 
 // Uncomment whatever type you're using!
 #define DHTTYPE DHT11   // DHT 11 

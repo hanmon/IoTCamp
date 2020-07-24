@@ -17,6 +17,11 @@ char songStrBuffer[512];
 Tone tone1;
 //int btnPin[] = {19,18,17,16,15,14,6,7};
 int btnPin[] = {9,8,7,6,5,4,3,2};
+int ledPin = 13;
+volatile unsigned long lastTriggeredTime = 0;
+volatile bool stopBtnState = HIGH;
+const int debounceTime = 20;
+boolean stopFlag=false;
 
 const char *const songTable[] PROGMEM =
 {
@@ -30,8 +35,20 @@ void setup(void)
   for (int i = 0; i < 8; i++) {
     pinMode(btnPin[i], INPUT_PULLUP);
   }
+  attachInterrupt(digitalPinToInterrupt(2), isr, CHANGE);
+  pinMode(ledPin,OUTPUT);
 }
 
+void isr() {
+  if (millis() - lastTriggeredTime > debounceTime) {
+    if (stopBtnState == LOW) {
+      toggleLED();
+      stopFlag=true;
+    }
+    stopBtnState ^= 1;
+  }
+  lastTriggeredTime = millis();
+}
 
 
 void loop(void)
@@ -45,10 +62,15 @@ void loop(void)
   }
 }
 
+void toggleLED() {
+  volatile static bool ledState = LOW;
+  ledState ^= 1;
+  digitalWrite(ledPin, ledState);
+}
 
 int checkButtonPressed() {
-  bool btnState[8] = {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH};
-  for (int i = 0; i < 8; i++) {
+  bool btnState[7] = {HIGH, HIGH, HIGH, HIGH, HIGH, HIGH, HIGH};
+  for (int i = 0; i < 7; i++) {
     if (digitalRead(btnPin[i]) != HIGH) {
     delay(50);
       if (digitalRead(btnPin[i]) != HIGH) {

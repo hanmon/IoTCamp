@@ -14,7 +14,7 @@ Adafruit_SSD1306 display(OLED_RESET);
 #define XPOS 0
 #define YPOS 1
 #define DELTAY 2
-#define DHTPIN 3     // what digital pin we're connected to
+#define DHTPIN 23     // what digital pin we're connected to
 
 // Uncomment whatever type you're using!
 #define DHTTYPE DHT11   // DHT 11

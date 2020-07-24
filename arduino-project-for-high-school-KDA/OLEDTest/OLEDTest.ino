@@ -4,6 +4,7 @@
 #include <Adafruit_SSD1306.h>
 #include "flash.h"
 #include "marioStar.h"
+#include "star3.h"
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
 
@@ -20,7 +21,7 @@ void setup() {
   // Clear the buffer.
   display.clearDisplay();
   // put your main code here, to run repeatedly:
-  display.drawBitmap(0,0,flash,128,64,1);
+  display.drawBitmap(0,0,star2,128,64,1);
   display.display();
   delay(10000);
   display.clearDisplay();

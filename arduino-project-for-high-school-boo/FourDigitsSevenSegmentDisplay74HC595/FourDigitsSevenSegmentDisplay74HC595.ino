@@ -6,7 +6,7 @@
 //Author: Bruce Chiu
 //Date:2019-07-21
 //int selectPins[] = {13, 10, 9, 7}; //D1,D2,D3,D4
-int selectPins[] = {11, 10, 9, 8}; //D1,D2,D3,D4
+int selectPins[] = {14, 15, 16, 17}; //D1,D2,D3,D4
 //int ledPins[] = {12, 8, 5, 3, 2, 11, 6, 4}; //ABCDEFGdp
 
 // pin 4 of 74HC595 (SHCP/SRCLK)

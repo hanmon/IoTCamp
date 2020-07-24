@@ -26,7 +26,7 @@ void setup() {
   // Modify this line, by changing the "0" to the index of the serial
   // port corresponding to your Arduino board (as it appears in the list
   // printed by the line above).
-  arduino = new Arduino(this, Arduino.list()[0], 57600);
+  arduino = new Arduino(this, Arduino.list()[3], 57600);
 
   hs1 = new HScrollbar(0, height/4, width, 16, 16);
   hs2 = new HScrollbar(0, height*2/4, width, 16, 16);

@@ -1,5 +1,5 @@
 const int led=13;
-const int PIRout=2;
+const int PIRout=24;
 void setup() {  //定義針腳輸出入
   pinMode(led,OUTPUT); 
   pinMode(PIRout,INPUT);
@@ -16,4 +16,3 @@ void loop() {
     digitalWrite(led,LOW);
     }
 }
-

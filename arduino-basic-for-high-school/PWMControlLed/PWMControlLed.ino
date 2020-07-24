@@ -1,5 +1,5 @@
 //以PWM腳位(3,5,6,9,10,11其中之一)控制LED亮度(適用Arduino板)
-const int ledPin=12;
+const int ledPin=10;
 int brightness=0;
 int increment=1;
 int wait=20;

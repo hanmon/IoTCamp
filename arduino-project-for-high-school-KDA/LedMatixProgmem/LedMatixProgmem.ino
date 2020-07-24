@@ -20,7 +20,8 @@ const byte Patterns[][8] PROGMEM = {
   {B00001000, B00001100, B00001110, B11111111, B11111111, B00001110, B00001100, B00001000}, //5.Arrow Right
   {B00010000, B00110000, B01110000, B11111111, B11111111, B01110000, B00110000, B00010000}, //6.Arrow Left
   {B00000000, B00100100, B00100100, B00000000, B10000001, B10000001, B01000010, B00111100}, //7.smile
-  {B00000000, B00100100, B00100100, B00000000, B00000000, B00111100, B01000010, B00000000} //8.sad
+  {B00000000, B00100100, B00100100, B00000000, B00000000, B00111100, B01000010, B00000000}, //8.sad
+  {B00011000, B00111100, B01111110, B11111111, B00011000, B00011000, B00011000, B00011000} //9.Arrow UP
 };
 
 
@@ -57,12 +58,12 @@ void loop() {
   // put your main code here, to run repeatedly:
   byte buf[8];
   for (int i = 0; i < 8; i++) {
-    buf[i] = pgm_read_byte(&Patterns[7][i]);
+    buf[i] = pgm_read_byte(&Patterns[9][i]);
   }
   showGraph(buf);
   delay(wait);
   for (int i = 0; i < 8; i++) {
-    buf[i] = pgm_read_byte(&Patterns[8][i]);
+    buf[i] = pgm_read_byte(&Patterns[9][i]);
   }
   showGraph(buf);
   delay(wait);
