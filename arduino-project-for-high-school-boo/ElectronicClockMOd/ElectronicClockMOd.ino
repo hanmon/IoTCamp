@@ -40,8 +40,8 @@ void setup()
   //Pin7設定為內部上拉，若Pin7狀態為HIGH，則重設時鐘時間
   pinMode(slideSwitchPin, INPUT_PULLUP);
   if (digitalRead(slideSwitchPin) == HIGH) {
-    rtc.setTime(14, 42, 0);     // Set the time to 12:00:00 (24hr format)
-    rtc.setDate(8, 2, 2020);   // Set the date to August 6th, 2010
+    rtc.setTime(11, 30, 0);     // Set the time to 12:00:00 (24hr format)
+    rtc.setDate(25, 7, 2020);   // Set the date to August 6th, 2010
   }
 
   Time t = rtc.getTime();
