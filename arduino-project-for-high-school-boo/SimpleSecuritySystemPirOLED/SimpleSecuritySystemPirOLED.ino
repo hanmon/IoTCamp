@@ -34,7 +34,8 @@ char msgNone[]="None";
 
 
 void setup() {
-  pinMode(pirPin, INPUT);
+  //如果使用磁簧開關，請將INPUT_PULLUP當作pinMode的第二個參數
+  pinMode(pirPin, INPUT_PULLUP);
 //  attachInterrupt(digitalPinToInterrupt(reedRelayPin), btnHandlerArduino, CHANGE);
   pinMode(ledPin, OUTPUT);
   Serial.begin(115200);
